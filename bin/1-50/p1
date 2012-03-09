@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 # endoding: UTF-8
-#
+$:.unshift(File.dirname(__FILE__) + '/../../lib') unless $:.include?(File.dirname(__FILE__) + '/../../lib')
+
 # http://projecteuler.net/problem=1
 # If we list all the natural numbers below 10 that are multiples of 3 or 5,
 # we get 3, 5, 6 and 9. The sum of these multiples is 23.
@@ -9,6 +10,8 @@
 
 # My twist on this will be finding the sum of all the natural numbers 
 # being a multiple of 3 or 5 below a number supplied on the command line
+
+require 'pes'
 
 if ARGV[0].nil? || ARGV[0].is_a?(Numeric)
   print "p1.rb = Solution to Project Euler's first posted problem\n"
