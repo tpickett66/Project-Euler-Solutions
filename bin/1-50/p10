@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+# encoding: UTF-8
+$:.unshift(File.dirname(__FILE__) + '/../../lib') unless $:.include?(File.dirname(__FILE__) + '/../../lib')
+
+# The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
+
+# Find the sum of all the primes below two million.
+
+require 'pes'

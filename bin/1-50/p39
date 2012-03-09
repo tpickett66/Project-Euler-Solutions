@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+# encoding: UTF-8
+$:.unshift(File.dirname(__FILE__) + '/../../lib') unless $:.include?(File.dirname(__FILE__) + '/../../lib')
+
+# If p is the perimeter of a right angle triangle with integral length sides, {a,b,c}, there are exactly three solutions for p = 120.
+
+# {20,48,52}, {24,45,51}, {30,40,50}
+
+# For which value of p  1000, is the number of solutions maximised?
+
+require 'pes'

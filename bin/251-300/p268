@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+# encoding: UTF-8
+$:.unshift(File.dirname(__FILE__) + '/../../lib') unless $:.include?(File.dirname(__FILE__) + '/../../lib')
+
+# It can be verified that there are 23 positive integers less than 1000 that are divisible by at least four distinct primes less than 100.
+
+# 
+
+# Find how many positive integers less than 1016 are divisible by at least four distinct primes less than 100.
+
+require 'pes'

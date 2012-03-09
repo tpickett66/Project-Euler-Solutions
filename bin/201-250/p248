@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+# encoding: UTF-8
+$:.unshift(File.dirname(__FILE__) + '/../../lib') unless $:.include?(File.dirname(__FILE__) + '/../../lib')
+
+# The first number n for which φ(n)=13! is 6227180929.
+
+# Find the 150,000th such number.
+
+require 'pes'

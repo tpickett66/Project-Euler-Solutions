@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+# encoding: UTF-8
+$:.unshift(File.dirname(__FILE__) + '/../../lib') unless $:.include?(File.dirname(__FILE__) + '/../../lib')
+
+# A prime number p is called a Panaitopol prime if  for some positive integersx and y.
+
+# 
+
+# 
+
+# Find how many Panaitopol primes are less than 51015.
+
+require 'pes'

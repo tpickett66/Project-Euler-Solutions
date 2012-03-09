@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+# encoding: UTF-8
+$:.unshift(File.dirname(__FILE__) + '/../../lib') unless $:.include?(File.dirname(__FILE__) + '/../../lib')
+
+# How many 18-digit numbers n (without leading zeros) are there such that no digit occurs more than three times in n?
+
+require 'pes'

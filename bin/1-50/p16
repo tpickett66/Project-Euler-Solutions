@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+# encoding: UTF-8
+$:.unshift(File.dirname(__FILE__) + '/../../lib') unless $:.include?(File.dirname(__FILE__) + '/../../lib')
+
+# 215 = 32768 and the sum of its digits is 3 + 2 + 7 + 6 + 8 = 26.
+
+# What is the sum of the digits of the number 21000?
+
+require 'pes'
