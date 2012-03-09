@@ -7,3 +7,5 @@ $:.unshift(File.dirname(__FILE__) + '/../../lib') unless $:.include?(File.dirnam
 # What is the largest prime factor of the number 600851475143 ?
 
 require 'pes'
+
+# notes
