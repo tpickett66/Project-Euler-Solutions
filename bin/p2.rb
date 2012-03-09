@@ -8,3 +8,18 @@
 # 
 # By considering the terms in the Fibonacci sequence whose values do not
 # exceed four million, find the sum of the even-valued terms.
+
+require 'mathn'
+
+max = 4*10**6
+vals = [1,2]
+
+while vals.last < max
+  vals << vals[-2] + vals[-1]
+end
+
+evens = vals.select{|i| i%2 == 0 && i < max}
+
+total = vals.inject(0){|m,o| m + o}
+
+puts total
