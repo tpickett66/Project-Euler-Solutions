@@ -8,6 +8,31 @@
 # Find the sum of all the multiples of 3 or 5 below 1000.
 
 # My twist on this will be finding the sum of all the natural numbers 
-# being a multiple of 3 or 5 below a number supplied on the commandline
+# being a multiple of 3 or 5 below a number supplied on the command line
 
-if ARGV[0].nil?
+if ARGV[0].nil? || ARGV[0].is_a?(Numeric)
+  print "p1.rb = Solution to Project Euler's first posted problem\n"
+  print "\n"
+  print "USAGE: p1.rb NUMBER_TO_CHECK\n"
+  print "\n"
+  print "e.x.:\n"
+  print "$: p1.rb 10\n"
+  print "\nYeilds:\n"
+  print `#{File.expand_path(__FILE__)} 10`
+else
+  number = ARGV[0].to_i
+  start_time = Time.now
+  print "Checking: #{number}\n"
+  found = []
+  (1...number).each do |i|
+    print "."
+    found << i if i%3 == 0 || i%5 == 0
+  end
+  result = found.inject(0){|m,o| m + o}
+  stop_time = Time.now
+  et = stop_time - start_time
+  print "\nTask Complete!\n"
+  print "Numbers matching criteria: #{found.join(', ')}\n"
+  print "Sum: #{result}\n"
+  print "Elapsed Time: #{et} sec"
+end
