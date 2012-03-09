@@ -12,15 +12,32 @@ $:.unshift(File.dirname(__FILE__) + '/../../lib') unless $:.include?(File.dirnam
 
 require 'pes'
 
-max = 4*10**6
-vals = [1,2]
+# reference sequence for first 38 values
+# ref = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610,
+#        987, 1597, 2584, 4181, 6765, 10946, 17711, 28657, 46368, 75025,
+#        121393, 196418, 317811, 514229, 832040, 1346269, 2178309, 3524578,
+#        5702887, 9227465, 14930352, 24157817, 39088169]
+# ref_evens = ref.select{|val| val.even?}
 
-while vals.last < max
-  vals << vals[-2] + vals[-1]
+ans = 4613732
+
+max = 4_000_000
+# max = 39088169
+vals = [0,1,1]
+
+total = 0
+evens = [0]
+while vals[-2] + vals[-1] <= max
+  new_val = vals[-2] + vals[-1]
+  if new_val.even?
+    total += new_val
+    evens << new_val
+  end
+  vals << new_val
 end
 
-evens = vals.select{|i| i%2 == 0 && i < max}
 
-total = vals.inject(0){|m,o| m + o}
-
+puts vals.inspect
+puts evens.inspect
 puts total
+puts total <=> ans
