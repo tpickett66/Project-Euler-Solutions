@@ -17,7 +17,7 @@ base_path = File.dirname(File.expand_path(__FILE__))
 agent = Mechanize.new {|a| a.user_agent_alias = 'Mac Safari'}
 
 magic_header = "#!/usr/bin/env ruby\n# encoding: UTF-8\n"
-magic_header << "$:.unshift(File.dirname(__FILE__) + '/../lib') unless $:.include?(File.dirname(__FILE__) + '/../lib')\n\n"
+magic_header << "$:.unshift(File.dirname(__FILE__) + '/../../lib') unless $:.include?(File.dirname(__FILE__) + '/../../lib')\n\n"
 
 req_stmt = "require 'pes'"
 
