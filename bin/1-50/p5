@@ -7,3 +7,17 @@ $:.unshift(File.dirname(__FILE__) + '/../../lib') unless $:.include?(File.dirnam
 # What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
 
 require 'pes'
+
+start = Time.now
+
+solution = 2520 # our number will most likely have to be larger than this
+checks = (2,..20).to_a
+while (Time.now.to_i - start.to_i) < 30 do # if we haven't solved in 30 seconds we aren't going to...
+  break if checks.all?{|c| solution % c == 0} # drop out of the loop if we win!
+  solution += 20 # increment by 20 since we're looking for a multiple of it
+end
+
+stop = Time.now
+et = (stop.to_f - start.to_f).round(3)
+
+puts "Solution Found: #{solution} (#{et} sec)."
