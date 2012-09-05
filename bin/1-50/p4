@@ -7,4 +7,21 @@ $:.unshift(File.dirname(__FILE__) + '/../../lib') unless $:.include?(File.dirnam
 
 # Find the largest palindrome made from the product of two 3-digit numbers.
 
-require 'pes'
+# approach
+# I've extended Numeric to include a #palindrome? method that does the check
+# for us. Once that was done it's trivial to collect all of the large
+# palindromes that are products of two 3 digit numbers in a set.
+
+require 'pes' # pull in our solution tools
+require 'set' # pull in set from the standard lib
+
+dromes = Set.new
+
+999.downto 900 do |n|
+  999.downto 900 do |m|
+    num = n * m
+    dromes.add(num) if num.palindrome?
+  end
+end
+
+puts dromes.max
