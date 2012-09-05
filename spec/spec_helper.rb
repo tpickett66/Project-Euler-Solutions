@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'bundler/setup'
-require 'minitest/unit'
+require 'minitest/spec'
 
 ROOT_PATH = File.join(File.dirname(__FILE__), "..")
 
