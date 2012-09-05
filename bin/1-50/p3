@@ -9,3 +9,18 @@ $:.unshift(File.dirname(__FILE__) + '/../../lib') unless $:.include?(File.dirnam
 require 'pes'
 
 # notes
+# The approach here is to grab all of the primes up to sqrt(n) and check them
+# as factors.
+
+n = 600851475143
+
+primes = PrimeSeive.primes_less_than(Math.sqrt(n).ceil)
+
+primes.reverse!
+
+index = 0
+until n%primes[index] == 0
+  index += 1
+end
+
+puts primes[index]
