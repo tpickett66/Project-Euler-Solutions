@@ -15,6 +15,7 @@ $:.unshift(File.dirname(__FILE__) + '/../../lib') unless $:.include?(File.dirnam
 require 'pes' # pull in our solution tools
 require 'set' # pull in set from the standard lib
 
+start = Time.now
 dromes = Set.new
 
 999.downto 900 do |n|
@@ -24,4 +25,8 @@ dromes = Set.new
   end
 end
 
-puts dromes.max
+max = dromes.max
+
+stop = Time.now
+et = (stop.to_f - start.to_f).round(3)
+puts "Found solution: #{max} (#{et} sec)"
