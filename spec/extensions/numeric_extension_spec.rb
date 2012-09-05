@@ -13,6 +13,16 @@ describe NumericExtension do
       95.palindrome?.must_equal false
       95.95.palindrome?.must_equal false
     end
+
+    it "must return false for negitive numbers" do
+      -1.palindrome?.must_equal false
+    end
+
+    it "must return false for single digit numbers" do
+      0.palindrome?.must_equal false
+      1.palindrome?.must_equal false
+      9.palindrome?.must_equal false
+    end
   end
 end
 
