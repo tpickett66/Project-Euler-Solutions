@@ -5,3 +5,5 @@ gem 'guard'
 gem 'guard-minitest'
 gem 'rb-fsevent'
 gem 'debugger'
+gem 'minitest'
+gem 'turn', require: false
