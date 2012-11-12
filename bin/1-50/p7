@@ -7,3 +7,5 @@ $:.unshift(File.dirname(__FILE__) + '/../../lib') unless $:.include?(File.dirnam
 # What is the 10 001st prime number?
 
 require 'pes'
+
+# used calculator at http://primes.utm.edu/nthprime/index.php#nth
